@@ -9,7 +9,7 @@ This repository contains [describe your project briefly].
 ## Running the Project in Gitpod
 To launch the project directly in a Gitpod environment, click the following button:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/username/repository-name)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/new/#https://github.com/sahu-suraj/playwright-project.git)
 
 ### Steps:
 1. Click the **"Open in Gitpod"** button above.
