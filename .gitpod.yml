@@ -2,12 +2,10 @@ image: gitpod/workspace-full
 
 tasks:
   - name: Install dependencies
-    init: npm install @lambdatest/playwright-lambdatest
-    command: npx playwright install
+    init: |
+      npm install
+      npx playwright install
+      chmod +x node_modules/.bin/playwright
 
-  - name: Run tests in parallel on LambdaTest
+  - name: Run tests
     command: npx playwright test --workers=4
-
-ports:
-  - port: 3000
-    onOpen: open-preview
