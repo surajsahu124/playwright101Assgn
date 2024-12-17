@@ -8,4 +8,4 @@ tasks:
       chmod +x node_modules/.bin/playwright
 
   - name: Run tests
-    command: npx playwright test --workers=4
+    command: npm run test

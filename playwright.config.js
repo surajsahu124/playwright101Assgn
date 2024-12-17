@@ -8,7 +8,8 @@ const config = {
   testDir: 'tests',
   testMatch: '**/*.spec.js',
   timeout: 300000,
-  workers: 2,
+  workers: 3,
+  fullyParallel: true,
   use: {},
   'LT:Options': {
       'platform': 'Windows 10',
@@ -31,6 +32,18 @@ const config = {
     // Use additional configuration options provided by Playwright if required: https://playwright.dev/docs/api/class-testconfig
     {
       name: 'chrome:latest:Windows 10@lambdatest',
+      use: {
+        viewport: { width: 1280, height: 720 }
+      }
+    },
+    {
+      name: 'chrome:latest:MacOS Ventura@lambdatest',
+      use: {
+        viewport: { width: 1920, height: 1080 }
+      }
+    },
+    {
+      name: 'pw-firefox:latest:Windows 10@lambdatest',
       use: {
         viewport: { width: 1280, height: 720 }
       }
