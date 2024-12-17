@@ -24,6 +24,37 @@ module.exports = defineConfig({
     { name: 'firefox', use: { browserName: 'firefox' } },
   ],
 
+
+  projects: [
+    {
+      name: 'LambdaTest-Chrome',
+      use: {
+        browserName: 'chromium',
+        headless: true,
+        viewport: { width: 1280, height: 720 },
+      },
+    },
+    {
+      name: 'LambdaTest-Firefox',
+      use: {
+        browserName: 'firefox',
+        headless: true,
+        viewport: { width: 1280, height: 720 },
+      },
+    },
+  ],
+
+  // LambdaTest Grid Configuration
+  use: {
+    baseURL: 'https://playwright.lambdatest.com',
+    headless: true,
+    browserName: 'chromium',
+    launchOptions: {
+      args: ['--disable-gpu'],
+    },
+    // Authentication for LambdaTest Grid
+    server: `wss://sahusuraj4292:7epBur6QzX8AGBw85u9DsyDiAmFooRZ0lL4JuqVEztpSvQdapM@playwright.lambdatest.com/ws`,
+  },
   
 
 });

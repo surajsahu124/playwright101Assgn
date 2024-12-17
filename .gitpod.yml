@@ -1,15 +1,13 @@
-image: gitpod/workspace-full  # Prebuilt Gitpod image with tools like Node.js, Java, and Python
+image: gitpod/workspace-full
 
 tasks:
   - name: Install dependencies
-    init: npm install       # Run only once
-    command: npm start      # Run every time Gitpod starts
+    init: npm install @lambdatest/playwright-lambdatest
+    command: npx playwright install
+
+  - name: Run tests in parallel on LambdaTest
+    command: npx playwright test --workers=4
 
 ports:
   - port: 3000
-    onOpen: open-preview   # Opens preview automatically for dev servers running on port 3000
-
-vscode:
-  extensions:
-    - ms-vscode.live-server
-
+    onOpen: open-preview
