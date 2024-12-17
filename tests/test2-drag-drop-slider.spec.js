@@ -1,4 +1,5 @@
-const { test, expect } = require('@playwright/test');
+const { test } = require('../lambdatest-setup')
+const { expect } = require('@playwright/test');
 
 test('Drag & Drop Sliders', async ({ page }) => {
   await page.goto('https://www.lambdatest.com/selenium-playground');
