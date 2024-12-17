@@ -1,0 +1,15 @@
+image: gitpod/workspace-full  # Prebuilt Gitpod image with tools like Node.js, Java, and Python
+
+tasks:
+  - name: Install dependencies
+    init: npm install       # Run only once
+    command: npm start      # Run every time Gitpod starts
+
+ports:
+  - port: 3000
+    onOpen: open-preview   # Opens preview automatically for dev servers running on port 3000
+
+vscode:
+  extensions:
+    - ms-vscode.live-server
+
