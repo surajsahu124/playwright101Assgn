@@ -3,9 +3,7 @@ image: gitpod/workspace-full
 tasks:
   - name: Install dependencies
     init: |
-      npm install
-      npx playwright install
-      chmod +x node_modules/.bin/playwright
+      npx playwright install; npx playwright install-deps; npm install
 
   - name: Run tests
     command: npm run test
