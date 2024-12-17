@@ -20,8 +20,13 @@ To launch the project directly in a Gitpod environment, click the following butt
 - Open the terminal inside Gitpod.
 - Run the test commands:
   ```bash
+  apt update
+  apt install -y nodejs npm
+  npx playwright install
+  chmod +x node_modules/.bin/playwright (run this command if permission denied)
+  npx playwright install-deps
   npm install
-  npm test
+  npm run test
   ```
 
 ## Key Files
